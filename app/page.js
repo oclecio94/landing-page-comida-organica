@@ -1,113 +1,94 @@
-import Image from 'next/image'
+import Image from "next/image";
+import vegetable from "../public/img/vegetable.png";
+import chef from "../public/img/chef.png";
+import dish from "../public/img/dish.png";
+import driver from "../public/img/driver.png";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <div className="w-full min-h-screen font-sans text-gray-900 bg-gradient-to-br from-transparent to-green-100">
+      <nav className="flex items-center justify-between px-24 py-8 max-w-screen-xl mx-auto">
+        <a className="text-4xl font-bold tracking-wide" href="#">
+          Organ<span className="text-green-500">o</span>
+        </a>
+        <ul className="flex items-center space-x-8">
+          <li className="font-bold">
+            <a href="#">Principal</a>
+          </li>
+          <li className="font-bold">
+            <a href="#">Delivery</a>
+          </li>
+          <li className="font-bold">
+            <a href="#">Preços</a>
+          </li>
+          <li className="font-bold">
+            <a href="#">Contato</a>
+          </li>
+          <button className="bg-green-500 rounded-xl font-bold text-white px-8 py-3 h-13 hover:bg-green-400">
+            Pedido
+          </button>
+        </ul>
+      </nav>
+      <div className="flex justify-between px-24 py-8 max-w-screen-xl mx-auto">
+        <div className="max-w-md">
+          <span className="flex items-center px-1 text-xl text-green-500">
+            <span className="font-medium">Comida 100% Orgânica</span>
+            <Image className="w-auto h-8" src={vegetable} alt="vegetal"></Image>
+          </span>
+
+          <h1 className="pt-4 text-6xl font-bold tracking-tighter leading-tight">
+            Vantagem em um estilo de vida{" "}
+            <span className="text-green-500">saudável</span>
+          </h1>
+          <p className="pt-8 text-lg font-normal text-gray-600 leading-relaxed">
+            Escolha hábitos saudáveis com refeições diárias Organo preparada
+            pelo nosso especialista em nutrição e chef
+          </p>
+          <div className="flex pt-8 space-x-6">
+            <button className="flex justify-center items-center h-13 px-8 py-3 font-bold bg-green-600 text-white rounded-xl hover:bg-green-500">
+              Iniciar
+            </button>
+            <button className="flex justify-center items-center h-13 px-8 py-3 font-bold text-gray-900 border border-gray-900 rounded-xl hover:shadow-xl transition-shadow duration-300">
+              Explorar Menu
+            </button>
+          </div>
+          <div className="flex pt-20">
+            <Image className="w-24 h-auto" src={chef} alt="chef"></Image>
+            <div className="pt-5 pl-3">
+              <div className="text-xl font-bold leading-relaxed">
+                Chef do mês
+              </div>
+              <div className="inline-flex text-gray-600 leading-relaxed">
+                As pessoas amam ele
+              </div>
+              <div className="font-bold text-green-500 leading-relaxed">
+                80+ pratos famosos
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex-1 flex flex-col relative">
+          <Image
+            className="max-w-xl drop-shadow-2xl self-end"
+            src={dish}
+            alt="salada"
+          ></Image>
+          <div className="absolute right-0 bottom-4 flex rounded-xl shadow-xl bg-white/80 backdrop-blur-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+              className="w-auto h-20 self-end"
+              src={driver}
+              alt="entregador"
+            ></Image>
+            <div className="pr-7 pl-2 py-5">
+              <div className="font-bold">Entrega rápida!</div>
+              <div className="text-gray-600 leading-relaxed">
+                em até 30 minutos
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
